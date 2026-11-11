@@ -1,5 +1,5 @@
 *** Settings ***
-resource    amazon_resources_gherkin_bdd.robot
+Resource    ../resources/amazon_resources_gherkin_bdd.robot
 Test Setup    Abrir navegador
 Test Teardown    Fechar navegador
 
@@ -21,6 +21,5 @@ Caso de teste 02 - Pesquisa de um produto
     Quando pesquisar pelo produto "Xbox Series S"
     Então o titulo da página deve conter "Xbox Series S"
     Log    Teste de pesquisa de produto.
-
 
 

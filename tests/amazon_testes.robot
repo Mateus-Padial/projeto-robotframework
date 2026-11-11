@@ -1,5 +1,5 @@
 *** Settings ***
-resource    amazon_resources.robot
+Resource    ../resources/amazon_resources.robot
 Test Setup    Abrir navegador
 Test Teardown    Fechar navegador
 
@@ -21,4 +21,3 @@ Caso de teste 02 - Pesquisa de um produto
     Clicar no botão de pesquisa
     verificar que os resultados da pesquisa são exibidos corretamente
     Log    Teste de pesquisa de produto.
-
