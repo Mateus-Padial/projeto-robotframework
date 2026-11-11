@@ -47,3 +47,28 @@ Clicar no botão de pesquisa
 
 verificar que os resultados da pesquisa são exibidos corretamente
     Page Should Contain    ${produto_pesquisa}
+
+
+#GHERKIN STEPS DEFINITIONS
+
+Dado que estou na home page da Amazon.com.br
+    Acessar a home page do site Amazon.com.br
+
+Quando acessar o menu de "Games"
+    Entrar no menu de "Games"
+
+Então o titulo da página deve ser "${titulo_pagina_games}"
+    verificar se o titulo da pagina fica "${titulo_pagina_games}"
+
+E o texto "${text_games}" estiver visível na página
+    verificar se aparece a frase "${text_games}"
+
+E categoria "${text_games}" estiver visível na página
+    verificar se aparece a categoria "${text_games}"
+
+Quando pesquisar pelo produto "${produto_pesquisa}"
+    Digitar o nome do produto "${produto_pesquisa}" no campo de pesquisa
+    Clicar no botão de pesquisa
+
+Então o titulo da página deve conter "${produto_pesquisa}"
+    verificar que os resultados da pesquisa são exibidos corretamente
