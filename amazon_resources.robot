@@ -1,0 +1,49 @@
+*** Settings ***
+library    SeleniumLibrary
+
+
+*** Variables ***
+${navegador}    chrome
+${URL}    https://www.amazon.com.br/
+${menu_games}    xpath=//a[@href='/Games-Consoles/b/?ie=UTF8&node=7791985011&ref_=nav_cs_video_games'][contains(.,'Games')]
+${titulo_games}    xpath=//span[contains(text(),'Games e Consoles')]
+${titulo_pagina_games}    Games e Consoles | Amazon.com.br
+${text_games}    Games e Consoles
+${campo_pesquisa}    id=twotabsearchtextbox
+${produto_pesquisa}    Xbox Series S
+${botao_pesquisa}    id=nav-search-submit-button
+
+*** Keywords ***
+
+Abrir navegador
+    Open Browser   browser=${navegador}
+    Maximize Browser Window
+    
+Fechar navegador
+    Close Browser
+
+Acessar a home page do site Amazon.com.br
+    Go To    ${URL}
+    Wait Until Element Is Visible    ${menu_games}    timeout=10s
+
+Entrar no menu de "Games"
+    Click Element   ${menu_games}
+
+verificar se o titulo da pagina fica "${titulo_pagina_games}"
+    Wait Until Element Is Visible    ${titulo_games}    timeout=5s
+    Page Should Contain    ${titulo_pagina_games}
+
+verificar se aparece a frase "${text_games}"
+    Page Should Contain    ${text_games}
+
+verificar se aparece a categoria "${text_games}"
+    Page Should Contain    ${text_games}
+
+Digitar o nome do produto "${produto_pesquisa}" no campo de pesquisa
+    Input Text    ${campo_pesquisa}    ${produto_pesquisa}
+
+Clicar no botão de pesquisa
+    Click Button    ${botao_pesquisa}
+
+verificar que os resultados da pesquisa são exibidos corretamente
+    Page Should Contain    ${produto_pesquisa}

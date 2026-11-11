@@ -1,0 +1,50 @@
+1794407756856	geckodriver	INFO	Listening on 127.0.0.1:61036
+1794407760002	mozrunner::runner	INFO	Running command: "C:\\Users\\mateu\\.cache\\selenium\\firefox\\win64\\160.0\\firefox.exe" "--marionette" "--remote-debugging- ... 7" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\mateu\\AppData\\Local\\Temp\\rust_mozprofileXuWtuZ"
+Dynamically enable window occlusion 0
+1794407760877	Marionette	INFO	Marionette enabled
+1794407761012	Marionette	INFO	Listening on port 59061
+WebDriver BiDi listening on ws://127.0.0.1:61037
+Read port: 59061
+1794407761181	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[ERROR shell_windows::limited_access_features] Error generating feature token: NS_ERROR_FAILURE
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Erro não especificado" }
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Erro não especificado" }
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Erro não especificado" }
+1794407764150	Marionette	INFO	Stopped listening on port 59061
+console.error: RSLoader: 
+  Failed to retrieve recipes from Remote Settings
+  Message: Error: Shutdown started
+  Stack:
+    ShutdownStartedError@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:1577:5
+#throwDuringShutdown@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:1148:13
+#raceShutdown@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:743:30
+getRecipesFromCollection@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:795:41
+getRecipesFromAllCollections@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:651:39
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:588:17
+quit@chrome://remote/content/shared/Browser.sys.mjs:102:22
+quit@chrome://remote/content/marionette/driver.sys.mjs:3079:44
+dispatch@chrome://remote/content/marionette/server.sys.mjs:317:49
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/<@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/<@chrome://remote/content/marionette/transport.sys.mjs:493:20
+
+console.error: ExperimentAPI: 
+  Failed to enable RemoteSettingsExperimentLoader:
+  Message: Error: Shutdown started
+  Stack:
+    ShutdownStartedError@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:1577:5
+#throwDuringShutdown@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:1148:13
+#raceShutdown@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:743:30
+getRecipesFromCollection@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:795:41
+getRecipesFromAllCollections@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:651:39
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:588:17
+quit@chrome://remote/content/shared/Browser.sys.mjs:102:22
+quit@chrome://remote/content/marionette/driver.sys.mjs:3079:44
+dispatch@chrome://remote/content/marionette/server.sys.mjs:317:49
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/<@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/<@chrome://remote/content/marionette/transport.sys.mjs:493:20
+
+JavaScript error: resource://messaging-system/lib/SpecialMessageActions.sys.mjs, line 891: TypeError: can't access property "documentGlobal", browser is undefined
