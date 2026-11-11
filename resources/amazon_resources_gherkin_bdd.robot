@@ -1,6 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
-Resource    amazon_page.robot
+Resource    pages/amazon_page.robot
 
 
 *** Variables ***

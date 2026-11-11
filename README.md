@@ -12,19 +12,28 @@ Projeto de testes web automatizados para o site [Amazon Brasil](https://www.amaz
 
 | Arquivo ou pasta | Responsabilidade |
 | --- | --- |
-| `amazon_page.robot` | Page Object com os locators dos elementos da Amazon. |
-| `amazon_resources.robot` | Keywords reutilizáveis de navegação, pesquisa e verificações; importa o Page Object. |
-| `amazon_resources_gherkin_bdd.robot` | Keywords reutilizáveis com nomes em português no estilo Gherkin; importa o Page Object. |
-| `amazon_testes.robot` | Casos de teste escritos com as keywords convencionais. |
-| `amazon_testes_gherkin_bdd.robot` | Os mesmos fluxos expressos com steps em português no estilo Gherkin/BDD. |
-| `amazon_testes_gherkin_bdd_forma2.robot` | Variação da suite BDD que reutiliza `amazon_resources.robot`. |
+| `tests/` | Suites de testes Robot Framework. |
+| `resources/` | Keywords e recursos compartilhados pelas suites. |
+| `resources/pages/` | Page Objects e locators das páginas. |
 | `resultados/` | Relatórios e resultados de execuções anteriores. |
+| `.vscode/` | Configurações locais do VS Code. |
+
+### Suites e resources
+
+| Arquivo | Responsabilidade |
+| --- | --- |
+| `tests/amazon_testes.robot` | Casos de teste escritos com as keywords convencionais. |
+| `tests/amazon_testes_gherkin_bdd.robot` | Fluxos expressos com steps em português no estilo Gherkin/BDD. |
+| `tests/amazon_testes_gherkin_bdd_forma2.robot` | Variação da suite BDD que reutiliza o resource convencional. |
+| `resources/pages/amazon_page.robot` | Page Object com os locators dos elementos da Amazon. |
+| `resources/amazon_resources.robot` | Keywords reutilizáveis de navegação, pesquisa e verificações; importa o Page Object. |
+| `resources/amazon_resources_gherkin_bdd.robot` | Keywords reutilizáveis no estilo Gherkin; importa o Page Object. |
 
 ## Padrões e organização
 
 ### Page Object
 
-Os seletores dos elementos da página ficam separados das ações e verificações. O arquivo `amazon_page.robot` centraliza os locators, por exemplo:
+Os seletores dos elementos da página ficam separados das ações e verificações. O arquivo `resources/pages/amazon_page.robot` centraliza os locators, por exemplo:
 
 ```robotframework
 *** Variables ***
@@ -36,12 +45,18 @@ Os resources de keywords importam esse arquivo na seção `*** Settings ***`. As
 
 ```robotframework
 *** Settings ***
-Resource    amazon_page.robot
+Resource    pages/amazon_page.robot
 ```
 
 ### Resources e keywords reutilizáveis
 
-Os arquivos `amazon_resources*.robot` agrupam as operações, como abrir e maximizar o navegador, acessar a página inicial, clicar no menu, pesquisar um produto e conferir o conteúdo exibido. As suites importam esses resources e compõem os passos de cada caso de teste.
+Os arquivos `resources/amazon_resources*.robot` agrupam as operações, como abrir e maximizar o navegador, acessar a página inicial, clicar no menu, pesquisar um produto e conferir o conteúdo exibido. As suites importam esses resources usando caminhos relativos, por exemplo:
+
+```robotframework
+Resource    ../resources/amazon_resources.robot
+```
+
+Essa organização separa os casos de teste (`tests/`), a lógica reutilizável (`resources/`) e os locators específicos de páginas (`resources/pages/`).
 
 ### Estilo Gherkin/BDD
 
@@ -59,15 +74,15 @@ Os testes estão organizados com as tags `Menus` e `Pesquisa`. O navegador é ab
 Instale o Robot Framework, a SeleniumLibrary e tenha o Chrome disponível. Com o RobotCode configurado no ambiente do projeto, execute a suite desejada:
 
 ```powershell
-robotcode robot amazon_testes.robot
-robotcode robot amazon_testes_gherkin_bdd.robot
-robotcode robot amazon_testes_gherkin_bdd_forma2.robot
+robotcode robot tests/
 ```
 
 Para executar somente um grupo de cenários por tag, por exemplo:
 
 ```powershell
-robotcode robot -i Pesquisa amazon_testes.robot
+robotcode robot -i Pesquisa tests/
 ```
 
-Os testes acessam o site real; a execução depende da disponibilidade da Amazon e pode ser afetada por mudanças na página, conteúdo regional ou mecanismos anti-automação.
+Para executar uma suite específica, filtre pelo nome completo dela com `-bl`, conforme o longname listado por `robotcode discover tests`.
+
+Os testes acessam o site real; a execução depende da disponibilidade da Amazon e pode ser afetada por mudanças na página, conteúdo regional ou mecanismos anti-automação. Os relatórios e screenshots já existentes foram mantidos no lugar para preservar os resultados anteriores.
