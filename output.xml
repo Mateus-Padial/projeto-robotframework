@@ -1,192 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5.1 (Python 3.15.2 on win32)" generated="2026-11-11T14:07:32.566992" rpa="false" schemaversion="5">
-<suite id="s1" name="Amazon Testes Gherkin Bdd Forma2" source="C:\Users\mateu\robotframework\robotFramework\amazon_testes_gherkin_bdd_forma2.robot">
+<robot generator="Robot 7.5.1 (Python 3.15.2 on win32)" generated="2026-11-11T14:15:23.942970" rpa="false" schemaversion="5">
+<suite id="s1" name="Amazon Testes Gherkin Bdd" source="C:\Users\mateu\robotframework\robotFramework\amazon_testes_gherkin_bdd.robot">
 <test id="s1-t1" name="Caso de teste 01 - Acesso ao menu de &quot;Eletrônicos&quot;" line="8">
-<kw name="Abrir navegador" owner="amazon_resources" type="SETUP">
+<kw name="Abrir navegador" owner="amazon_resources_gherkin_bdd" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-11-11T14:07:33.026561" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2026-11-11T14:15:24.446121" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
 <arg>browser=${navegador}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-11-11T14:07:33.026253" elapsed="0.904024"/>
+<status status="PASS" start="2026-11-11T14:15:24.445907" elapsed="0.976502"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-11-11T14:07:33.930608" elapsed="0.340576"/>
+<status status="PASS" start="2026-11-11T14:15:25.422737" elapsed="0.246641"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:33.025135" elapsed="1.246235"/>
+<status status="PASS" start="2026-11-11T14:15:24.445194" elapsed="1.224379"/>
 </kw>
-<kw name="Dado que estou na home page da Amazon.com.br" owner="amazon_resources">
-<kw name="Acessar a home page do site Amazon.com.br" owner="amazon_resources">
+<kw name="Dado que estou na home page da Amazon.com.br" owner="amazon_resources_gherkin_bdd">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-11-11T14:07:34.275628" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<msg time="2026-11-11T14:15:25.675459" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-11-11T14:07:34.275463" elapsed="0.419505"/>
+<status status="PASS" start="2026-11-11T14:15:25.675254" elapsed="0.332656"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${menu_games}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-11T14:07:34.695273" elapsed="1.802398"/>
+<status status="PASS" start="2026-11-11T14:15:26.008300" elapsed="1.989662"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:34.275178" elapsed="2.222942"/>
+<status status="PASS" start="2026-11-11T14:15:25.674700" elapsed="2.323462"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:34.274610" elapsed="2.223605"/>
-</kw>
-<kw name="Quando acessar o menu de &quot;Games&quot;" owner="amazon_resources">
-<kw name="Entrar no menu de &quot;Games&quot;" owner="amazon_resources">
+<kw name="Quando acessar o menu de &quot;Games&quot;" owner="amazon_resources_gherkin_bdd">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-11T14:07:36.503183" level="INFO">Clicking element 'xpath=//a[@href='/Games-Consoles/b/?ie=UTF8&amp;node=7791985011&amp;ref_=nav_cs_video_games'][contains(.,'Games')]'.</msg>
+<msg time="2026-11-11T14:15:28.001117" level="INFO">Clicking element 'xpath=//a[@href='/Games-Consoles/b/?ie=UTF8&amp;node=7791985011&amp;ref_=nav_cs_video_games'][contains(.,'Games')]'.</msg>
 <arg>${menu_games}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-11T14:07:36.502842" elapsed="2.511996"/>
+<status status="PASS" start="2026-11-11T14:15:28.000780" elapsed="2.422614"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:36.502482" elapsed="2.512730"/>
+<status status="PASS" start="2026-11-11T14:15:28.000322" elapsed="2.423336"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:36.501995" elapsed="2.513529"/>
-</kw>
-<kw name="Então o titulo da página deve ser &quot;Games e Consoles | Amazon.com.br&quot;" owner="amazon_resources" source_name="Então o titulo da página deve ser &quot;${titulo_pagina_games}&quot;">
-<kw name="verificar se o titulo da pagina fica &quot;${titulo_pagina_games}&quot;" owner="amazon_resources" source_name="verificar se o titulo da pagina fica &quot;${titulo_pagina_games}&quot;">
+<kw name="Então o titulo da página deve ser &quot;Games e Consoles | Amazon.com.br&quot;" owner="amazon_resources_gherkin_bdd" source_name="Então o titulo da página deve ser &quot;${titulo_pagina_games}&quot;">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${titulo_games}</arg>
 <arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-11T14:07:39.018061" elapsed="0.048542"/>
+<status status="PASS" start="2026-11-11T14:15:30.424789" elapsed="0.051178"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-11-11T14:07:39.101925" level="INFO">Current page contains text 'Games e Consoles | Amazon.com.br'.</msg>
+<msg time="2026-11-11T14:15:30.514223" level="INFO">Current page contains text 'Games e Consoles | Amazon.com.br'.</msg>
 <arg>${titulo_pagina_games}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-11-11T14:07:39.066801" elapsed="0.035216"/>
+<status status="PASS" start="2026-11-11T14:15:30.476246" elapsed="0.038121"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:39.017610" elapsed="0.084492"/>
+<status status="PASS" start="2026-11-11T14:15:30.424318" elapsed="0.090183"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:39.016830" elapsed="0.085315"/>
-</kw>
-<kw name="E o texto &quot;Games e Consoles&quot; estiver visível na página" owner="amazon_resources" source_name="E o texto &quot;${text_games}&quot; estiver visível na página">
-<kw name="verificar se aparece a frase &quot;${text_games}&quot;" owner="amazon_resources" source_name="verificar se aparece a frase &quot;${text_games}&quot;">
+<kw name="E o texto &quot;Games e Consoles&quot; estiver visível na página" owner="amazon_resources_gherkin_bdd" source_name="E o texto &quot;${text_games}&quot; estiver visível na página">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-11-11T14:07:39.132126" level="INFO">Current page contains text 'Games e Consoles'.</msg>
+<msg time="2026-11-11T14:15:30.552864" level="INFO">Current page contains text 'Games e Consoles'.</msg>
 <arg>${text_games}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-11-11T14:07:39.103084" elapsed="0.029192"/>
+<status status="PASS" start="2026-11-11T14:15:30.515805" elapsed="0.037195"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:39.102875" elapsed="0.029534"/>
+<status status="PASS" start="2026-11-11T14:15:30.515348" elapsed="0.037778"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:39.102551" elapsed="0.029924"/>
-</kw>
-<kw name="E categoria &quot;Games e Consoles&quot; estiver visível na página" owner="amazon_resources" source_name="E categoria &quot;${text_games}&quot; estiver visível na página">
-<kw name="verificar se aparece a categoria &quot;${text_games}&quot;" owner="amazon_resources" source_name="verificar se aparece a categoria &quot;${text_games}&quot;">
+<kw name="E categoria &quot;Games e Consoles&quot; estiver visível na página" owner="amazon_resources_gherkin_bdd" source_name="E categoria &quot;${text_games}&quot; estiver visível na página">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-11-11T14:07:39.170486" level="INFO">Current page contains text 'Games e Consoles'.</msg>
+<msg time="2026-11-11T14:15:30.593471" level="INFO">Current page contains text 'Games e Consoles'.</msg>
 <arg>${text_games}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-11-11T14:07:39.135733" elapsed="0.034906"/>
+<status status="PASS" start="2026-11-11T14:15:30.553957" elapsed="0.039607"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:39.135315" elapsed="0.035616"/>
-</kw>
-<status status="PASS" start="2026-11-11T14:07:39.134720" elapsed="0.036372"/>
+<status status="PASS" start="2026-11-11T14:15:30.553550" elapsed="0.040097"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-11-11T14:07:39.175196" level="INFO">Teste de acesso ao menu de Games.</msg>
+<msg time="2026-11-11T14:15:30.594363" level="INFO">Teste de acesso ao menu de Games.</msg>
 <arg>Teste de acesso ao menu de Games.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-11-11T14:07:39.174058" elapsed="0.001333"/>
+<status status="PASS" start="2026-11-11T14:15:30.594034" elapsed="0.000378"/>
 </kw>
-<kw name="Fechar navegador" owner="amazon_resources" type="TEARDOWN">
+<kw name="Fechar navegador" owner="amazon_resources_gherkin_bdd" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-11-11T14:07:39.177639" elapsed="2.405711"/>
+<status status="PASS" start="2026-11-11T14:15:30.598289" elapsed="2.414063"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:39.176935" elapsed="2.406538"/>
+<status status="PASS" start="2026-11-11T14:15:30.595910" elapsed="2.416721"/>
 </kw>
 <doc>Esta suite mostra como pode ser feito os testes com a escrita de teste no estilo Gherkin BDD.</doc>
 <tag>Menus</tag>
-<status status="PASS" start="2026-11-11T14:07:33.024035" elapsed="8.559611"/>
+<status status="PASS" start="2026-11-11T14:15:24.444355" elapsed="8.568733"/>
 </test>
 <test id="s1-t2" name="Caso de teste 02 - Pesquisa de um produto" line="18">
-<kw name="Abrir navegador" owner="amazon_resources" type="SETUP">
+<kw name="Abrir navegador" owner="amazon_resources_gherkin_bdd" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-11-11T14:07:41.585138" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2026-11-11T14:15:33.017086" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
 <arg>browser=${navegador}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-11-11T14:07:41.584966" elapsed="1.348432"/>
+<status status="PASS" start="2026-11-11T14:15:33.016686" elapsed="1.507978"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-11-11T14:07:42.933649" elapsed="0.192711"/>
+<status status="PASS" start="2026-11-11T14:15:34.524910" elapsed="0.035793"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:41.584617" elapsed="1.541902"/>
+<status status="PASS" start="2026-11-11T14:15:33.015720" elapsed="1.545139"/>
 </kw>
-<kw name="Dado que estou na home page da Amazon.com.br" owner="amazon_resources">
-<kw name="Acessar a home page do site Amazon.com.br" owner="amazon_resources">
+<kw name="Dado que estou na home page da Amazon.com.br" owner="amazon_resources_gherkin_bdd">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-11-11T14:07:43.141424" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<msg time="2026-11-11T14:15:34.569094" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-11-11T14:07:43.141085" elapsed="0.304358"/>
+<status status="PASS" start="2026-11-11T14:15:34.568882" elapsed="0.352120"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${menu_games}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-11T14:07:43.445768" elapsed="1.679902"/>
+<status status="PASS" start="2026-11-11T14:15:34.921268" elapsed="1.936638"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:43.140594" elapsed="1.985242"/>
+<status status="PASS" start="2026-11-11T14:15:34.568406" elapsed="2.289674"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:43.136767" elapsed="1.989140"/>
-</kw>
-<kw name="Quando pesquisar pelo produto &quot;Xbox Series S&quot;" owner="amazon_resources" source_name="Quando pesquisar pelo produto &quot;${produto_pesquisa}&quot;">
-<kw name="Digitar o nome do produto &quot;${produto_pesquisa}&quot; no campo de pesquisa" owner="amazon_resources" source_name="Digitar o nome do produto &quot;${produto_pesquisa}&quot; no campo de pesquisa">
+<kw name="Quando pesquisar pelo produto &quot;Xbox Series S&quot;" owner="amazon_resources_gherkin_bdd" source_name="Quando pesquisar pelo produto &quot;${produto_pesquisa}&quot;">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-11T14:07:45.128942" level="INFO">Typing text 'Xbox Series S' into text field 'id=twotabsearchtextbox'.</msg>
+<msg time="2026-11-11T14:15:36.859634" level="INFO">Typing text 'Xbox Series S' into text field 'id=twotabsearchtextbox'.</msg>
 <arg>${campo_pesquisa}</arg>
 <arg>${produto_pesquisa}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-11T14:07:45.128612" elapsed="0.721896"/>
+<status status="PASS" start="2026-11-11T14:15:36.859285" elapsed="0.808798"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:45.128206" elapsed="0.722581"/>
-</kw>
-<kw name="Clicar no botão de pesquisa" owner="amazon_resources">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-11-11T14:07:45.852136" level="INFO">Clicking button 'id=nav-search-submit-button'.</msg>
+<msg time="2026-11-11T14:15:37.668717" level="INFO">Clicking button 'id=nav-search-submit-button'.</msg>
 <arg>${botao_pesquisa}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-11T14:07:45.851684" elapsed="2.785034"/>
+<status status="PASS" start="2026-11-11T14:15:37.668362" elapsed="3.150218"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:45.851154" elapsed="2.785677"/>
+<status status="PASS" start="2026-11-11T14:15:36.858848" elapsed="3.959887"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:45.127655" elapsed="3.509224"/>
-</kw>
-<kw name="Então o titulo da página deve conter &quot;Xbox Series S&quot;" owner="amazon_resources" source_name="Então o titulo da página deve conter &quot;${produto_pesquisa}&quot;">
-<kw name="verificar que os resultados da pesquisa são exibidos corretamente" owner="amazon_resources">
+<kw name="Então o titulo da página deve conter &quot;Xbox Series S&quot;" owner="amazon_resources_gherkin_bdd" source_name="Então o titulo da página deve conter &quot;${produto_pesquisa}&quot;">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-11-11T14:07:48.771092" level="INFO">Current page contains text 'Xbox Series S'.</msg>
+<msg time="2026-11-11T14:15:40.939138" level="INFO">Current page contains text 'Xbox Series S'.</msg>
 <arg>${produto_pesquisa}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-11-11T14:07:48.638477" elapsed="0.132754"/>
+<status status="PASS" start="2026-11-11T14:15:40.819520" elapsed="0.119705"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:48.637984" elapsed="0.133339"/>
-</kw>
-<status status="PASS" start="2026-11-11T14:07:48.637532" elapsed="0.133835"/>
+<status status="PASS" start="2026-11-11T14:15:40.819203" elapsed="0.120102"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-11-11T14:07:48.772268" level="INFO">Teste de pesquisa de produto.</msg>
+<msg time="2026-11-11T14:15:40.940172" level="INFO">Teste de pesquisa de produto.</msg>
 <arg>Teste de pesquisa de produto.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-11-11T14:07:48.771823" elapsed="0.000521"/>
+<status status="PASS" start="2026-11-11T14:15:40.939749" elapsed="0.000493"/>
 </kw>
-<kw name="Fechar navegador" owner="amazon_resources" type="TEARDOWN">
+<kw name="Fechar navegador" owner="amazon_resources_gherkin_bdd" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-11-11T14:07:48.773406" elapsed="2.387100"/>
+<status status="PASS" start="2026-11-11T14:15:40.941073" elapsed="2.390572"/>
 </kw>
-<status status="PASS" start="2026-11-11T14:07:48.772834" elapsed="2.387948"/>
+<status status="PASS" start="2026-11-11T14:15:40.940692" elapsed="2.391231"/>
 </kw>
 <tag>Pesquisa</tag>
-<status status="PASS" start="2026-11-11T14:07:41.584216" elapsed="9.576912"/>
+<status status="PASS" start="2026-11-11T14:15:33.014476" elapsed="10.317901"/>
 </test>
-<status status="PASS" start="2026-11-11T14:07:32.569102" elapsed="18.593804"/>
+<status status="PASS" start="2026-11-11T14:15:23.945320" elapsed="19.388756"/>
 </suite>
 <statistics>
 <total>
@@ -197,7 +170,7 @@
 <stat pass="1" fail="0" skip="0">Pesquisa</stat>
 </tag>
 <suite>
-<stat name="Amazon Testes Gherkin Bdd Forma2" id="s1" pass="2" fail="0" skip="0">Amazon Testes Gherkin Bdd Forma2</stat>
+<stat name="Amazon Testes Gherkin Bdd" id="s1" pass="2" fail="0" skip="0">Amazon Testes Gherkin Bdd</stat>
 </suite>
 </statistics>
 <errors>
